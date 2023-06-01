@@ -1,5 +1,4 @@
 <?php
-// array_map(): Aplica una función a cada elemento de un array y devuelve un nuevo array con los resultados.
 // array_reduce(): Reduce un array a un solo valor aplicando una función de devolución de llamada.
 // array_key_exists(): Comprueba si una clave existe en un array.
 // in_array(): Comprueba si un valor existe en un array.
@@ -67,7 +66,7 @@ print_r(array_filter($array2, "mayor"));
 print_r(array_filter($array2, "menor"));
 
 /**
- * *array_map() => 
+ * *array_map() => realiza operaciones con cada elemento del array, el primer argumento es la funcion ('lo que quiere que realice') y el segundo argumento es el array
  */
 function doble($n)
 {
@@ -77,4 +76,17 @@ function doble($n)
 
 $a = array(1, 2, 3, 4, 5);
 
-print_r(array_map("doble",$a));
+var_dump(array_map("doble",$a));
+/**
+* * array_reduce() =>
+*/
+
+function suma($acumulador,$numero){
+    $acumulador+=$numero;
+    return $acumulador;
+}
+
+
+$ejemploSuma = array(1, 2, 3, 4, 5,6);
+$ejemploSuma2();
+var_dump($ejemploSuma) ;
